@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import * as React from "react";
+import "./navbar.sass";
 
 const navitems = [
   {
@@ -37,10 +38,8 @@ const Navbar = () => {
     <nav>
       <ul>
         {navitems.map((navitem) => (
-          <li>
-            <Link key={navitem.name} to={`/${navitem.url}`}>
-              {navitem.name}
-            </Link>
+          <li key={navitem.name}>
+            <Link to={`/${navitem.url}`}>{navitem.name}</Link>
           </li>
         ))}
       </ul>

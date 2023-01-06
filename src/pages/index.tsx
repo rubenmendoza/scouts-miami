@@ -1,48 +1,10 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Navbar from "../components/navbar";
 import Layout from "../components/layout";
-
 const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const doclistStyles = {
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
 };
 
 const docLinks = [
@@ -71,12 +33,11 @@ const links = [
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <main style={pageStyles}>
-        <ul style={doclistStyles}>
+      <main>
+        <ul>
           {docLinks.map((doc) => (
-            <li key={doc.url} style={docLinkStyle}>
+            <li key={doc.url}>
               <a
-                style={linkStyle}
                 href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
               >
                 {doc.text}
@@ -84,18 +45,17 @@ const IndexPage: React.FC<PageProps> = () => {
             </li>
           ))}
         </ul>
-        <ul style={listStyles}>
+        <ul>
           {links.map((link) => (
-            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+            <li key={link.url}>
               <span>
                 <a
-                  style={linkStyle}
                   href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
                 >
                   {link.text}
                 </a>
 
-                <p style={descriptionStyle}>{link.description}</p>
+                <p>{link.description}</p>
               </span>
             </li>
           ))}
