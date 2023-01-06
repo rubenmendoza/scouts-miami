@@ -1,5 +1,6 @@
 import * as React from "react";
-import Navbar from "./navbar";
+import Navbar from "./header/navbar";
+import "./reset.sass";
 
 export interface props {
   children?: React.ReactNode;
