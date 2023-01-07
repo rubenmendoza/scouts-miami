@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 
-import "./navbar-item.sass";
+import "./styles.sass";
 
 interface iProps {
   label: string;
@@ -10,8 +10,10 @@ interface iProps {
 
 const NavbarItem = ({ url, label }: iProps) => {
   return (
-    <li>
-      <Link to={url}>{label}</Link>
+    <li className="navbar-item">
+      <Link to={url} className="medium">
+        {label}
+      </Link>
     </li>
   );
 };

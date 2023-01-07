@@ -1,31 +1,31 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  },
-];
+import Hero from "../components/hero";
 
 const links = [
   {
-    text: "Tutorial",
+    text: "Responsive",
     url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    description: "media queries - Menu",
+    color: "#E95800",
+  },
+  {
+    text: "Add Pages",
+    url: "https://www.gatsbyjs.com/docs/tutoria/",
+    description: "media, evets, join-us, contact",
+    color: "#E95800",
+  },
+  {
+    text: "Add Contact form with captcha",
+    url: "https://www.gatsbyjs.com/docs/tutori/",
+    description: "captcha ",
+    color: "#E95800",
+  },
+  {
+    text: "Add Widgets",
+    url: "https://www.gatsbyjs.com/docs/tuto/",
+    description: "instagram, google calendar, twitter",
     color: "#E95800",
   },
 ];
@@ -34,17 +34,8 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <main>
-        <ul>
-          {docLinks.map((doc) => (
-            <li key={doc.url}>
-              <a
-                href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-              >
-                {doc.text}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <Hero></Hero>
+        <h2>To do</h2>
         <ul>
           {links.map((link) => (
             <li key={link.url}>
@@ -76,6 +67,7 @@ export const Head: HeadFC = () => {
     <>
       <title>Home Page</title>
       <meta name="description" content="Hello World" />
+      <meta name="keywords" content="ello, orld" />
     </>
   );
 };

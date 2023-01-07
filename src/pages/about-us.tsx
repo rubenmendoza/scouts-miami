@@ -11,4 +11,12 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-export const Head: HeadFC = () => <title>About Us</title>;
+export const Head: HeadFC = () => {
+  return (
+    <>
+      <title>About Us</title>
+      <meta name="description" content="Hello World" />
+      <meta name="keywords" content="ello, orld" />
+    </>
+  );
+};

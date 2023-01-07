@@ -1,7 +1,7 @@
 import * as React from "react";
-import NavbarItem from "./navbar-item";
+import NavbarItem from "../navbar-item";
 
-import "./navbar.sass";
+import "./styles.sass";
 
 const navitems = [
   {

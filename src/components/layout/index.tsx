@@ -1,6 +1,9 @@
 import * as React from "react";
-import Navbar from "./header/navbar";
-import "./reset.sass";
+import { StaticImage } from "gatsby-plugin-image";
+import Navbar from "../navbar";
+import "../reset.sass";
+import "../theme.sass";
+import "./styles.sass";
 
 export interface props {
   children?: React.ReactNode;
@@ -8,9 +11,13 @@ export interface props {
 
 const Layout = ({ children }: props) => {
   return (
-    <>
+    <div className="container">
       <header>
-        <p>Logo</p>
+        <StaticImage
+          alt="Pack 247 Logo"
+          src="../../images/logo.svg"
+          className="logowidth"
+        />
         <Navbar />
       </header>
       <article>
@@ -20,7 +27,7 @@ const Layout = ({ children }: props) => {
       <footer>
         <p>Footer</p>
       </footer>
-    </>
+    </div>
   );
 };
 
