@@ -1,18 +1,41 @@
-.container
-    font-family: sans-serif
-    width: 200vh
-    margin: 0 auto
-    background: white
-    display: flex
-    flex-direction: column
+$s247-color-primary: var(--s247-color-primary) 
+$s247-color-primary_contrast:var(--s247-color-primary_contrast)
 
-header
-    display: grid
-    grid-template-columns: auto 1fr
-    grid-template-rows: 2fr
-    grid-column-gap: 5px
-    grid-row-gap: 0px
+body
+    font-family: sans-serif
+
+.top
+    background: $s247-color-primary
+    color: $s247-color-primary_contrast
+    
+.centered
+    display: flex
+    justify-content: center
+
+.container
+    width: 100vw
+    padding: 0 1rem
+    @media only screen and (min-width: 720px) 
+        width: 85vw
+        padding: 0 1rem
+    @media only screen and (min-width: 1024px) 
+        width: 75vw
+        padding: 0 2rem
+.row
+    display: flex
+    flex-flow: row
+    
+header,footer
+    display: flex
     margin-bottom: 1rem
+    flex-flow: row
+    align-items: center
+    justify-content: space-between
+    @media only screen and (min-width: 720px)
+        flex-flow: column 
     
 .logowidth
-    width: 10rem
+    width: 2.5rem
+    @media only screen and (min-width: 720px) 
+        width: 5rem
+

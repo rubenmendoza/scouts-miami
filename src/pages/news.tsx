@@ -1,6 +1,7 @@
 import { HeadFC } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const News = () => {
   return (
@@ -11,12 +12,4 @@ const News = () => {
 };
 
 export default News;
-export const Head: HeadFC = () => {
-  return (
-    <>
-      <title>News</title>
-      <meta name="description" content="Hello World" />
-      <meta name="keywords" content="ello, orld" />
-    </>
-  );
-};
+export const Head: HeadFC = () => <Seo title="News" />;

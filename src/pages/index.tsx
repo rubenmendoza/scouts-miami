@@ -2,6 +2,7 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
+import Seo from "../components/seo";
 
 const links = [
   {
@@ -62,12 +63,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => {
-  return (
-    <>
-      <title>Home Page</title>
-      <meta name="description" content="Hello World" />
-      <meta name="keywords" content="ello, orld" />
-    </>
-  );
-};
+export const Head: HeadFC = () => <Seo title="Home Page" />;
