@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "url": "/",
+      "label": "Home",
+      "icon": "icon-home"
+    },
+    {
+      "url": "/about-us",
+      "label": "About Us",
+      "icon": "icon-247"
+    },
+    {
+      "url": "/news",
+      "label": "News",
+      "icon": "icon-article"
+    },
+    {
+      "url": "/media",
+      "label": "Gallery",
+      "icon": "icon-camera"
+    },
+    {
+      "url": "/events",
+      "label": "Events",
+      "icon": "icon-event"
+    },
+    {
+      "url": "/join-us",
+      "label": "Join Us",
+      "icon": "icon-scouts"
+    },
+    {
+      "url": "/contact",
+      "label": "Contact",
+      "icon": "icon-message"
+    }
+  ]
+}

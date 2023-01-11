@@ -14,11 +14,12 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-breakpoints",
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `static-images`,
-        path: `${__dirname}/public/static/images`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
   ],
