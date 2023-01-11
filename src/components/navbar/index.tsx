@@ -25,7 +25,7 @@ const Navbar = () => {
           {data.allDataJson.nodes[0].items.map(
             (navitem: { url: string; icon: string; label: string }) => (
               <NavbarItem
-                url={navitem.label}
+                url={navitem.url}
                 label={navitem.label}
                 icon={navitem.icon}
                 key={navitem.label.replaceAll(" ", "").toLowerCase()}

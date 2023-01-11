@@ -1,0 +1,8 @@
+$variant: ("small": 0.85, "medium": 1, "large": 1.5)
+
+@each $name, $ratio in $variant 
+    .#{$name} 
+        a
+        font-size:  $ratio+rem
+        border-radius: ($ratio * 1)+rem
+        padding: ($ratio * 0.5)+rem ($ratio * 1)+rem

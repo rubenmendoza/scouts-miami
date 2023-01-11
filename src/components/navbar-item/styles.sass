@@ -2,15 +2,6 @@ $s247-color-primary:var(--s247-color-primary)
 $s247-color-primary_contrast:var(--s247-color-primary_contrast)
 $s247-color-primary_darken:var(--s247-color-primary_darken)
 
-$variant: ("small": 0.85, "medium": 1, "large": 1.5)
-
-@each $name, $ratio in $variant 
-    .#{$name} 
-        a
-        font-size:  $ratio+rem
-        border-radius: ($ratio * 1)+rem
-        padding: ($ratio * 0.5)+rem ($ratio * 1)+rem
-
 .navbar-item
     a
         display: flex
