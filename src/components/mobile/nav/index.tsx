@@ -19,7 +19,7 @@ const Nav = () => {
   `);
 
   return (
-    <>
+    <aside>
       <nav>
         <ul>
           {data.allDataJson.nodes[0].items.map(
@@ -34,7 +34,7 @@ const Nav = () => {
           )}
         </ul>
       </nav>
-    </>
+    </aside>
   );
 };
 

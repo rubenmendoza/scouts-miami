@@ -1,29 +1,53 @@
 $s247-color-primary:var(--s247-color-primary)
 $s247-color-primary_contrast:var(--s247-color-primary_contrast)
 $s247-color-primary_darken:var(--s247-color-primary_darken)
+$s247-color-secondary:var(--s247-color-secondary)
+$s247-color-accent:var(--s247-color-accent)
+
+@keyframes goRed 
+    from 
+        background-color: $s247-color-primary
+    to 
+        background-color: $s247-color-secondary
 
 .navbar-item
+    list-style: none
+    display: block
     a
+        text-decoration: none
         display: flex
-        flex-direction: column
         align-items: center
         gap: 1.25rem
-        height: 3.5rem
-        width: 3.5rem
+        &:hover, &[aria-current="page"]
+            span
+                color: $s247-color-secondary
+            img
+                animation: goRed 600ms ease-in-out
+                background-color: $s247-color-secondary
+                box-shadow: 0 0 0 4px $s247-color-secondary, 2px 1px 8px 4px rgba(10, 10, 0, 0.5)
+    @media only screen and (min-width: 720px) 
+        a
+            gap: 0.5rem
+            flex-direction: column
+
+
+    img
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0.625rem
+        height: 3rem
+        width: 3rem
         background-color: $s247-color-primary
         border-radius: 3rem
         border: 1px dashed $s247-color-primary_contrast,
         box-shadow: 0 0 0 4px $s247-color-primary, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
-        padding: 10px
-        &:hover, &[aria-current="page"]
-            background-color: $s247-color-primary_darken
-            box-shadow: 0 0 0 4px $s247-color-primary_darken, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
-            border: 1px dashed yellow
-    img
-        height: 2rem
+        margin: 0.25rem 1rem
     span
         color: $s247-color-primary
         font-weight: 600
         width: max-content
         text-transform: uppercase
-        font-size: 0.75rem
+        font-size: 1.5rem
+        @media only screen and (min-width: 720px) 
+            font-size: 0.75rem
