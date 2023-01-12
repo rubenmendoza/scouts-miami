@@ -1,11 +1,29 @@
+@keyframes active 
+    from 
+        left: -90vw
+    to 
+        left:0
+@keyframes inactive 
+    from 
+        left:0
+    to 
+        left: -90vw
 aside
   width: 90vw
   height: 100vh
   background: yellow
   position: absolute
-  z-index: 9
-  left: 0
   top: 0
+  left: -90vw
+  z-index: 9
+  animation: inactive 300ms ease-in-out   
+  &.active
+    animation: active 300ms ease-in-out   
+    left: 0
+  .header
+    display: flex
+    justify-content: end
+    padding: 1rem
   nav
     width: 100% 
     ul 

@@ -17,24 +17,49 @@ const Nav = () => {
       }
     }
   `);
-
+  const [isActive, setActive] = React.useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
   return (
-    <aside>
-      <nav>
-        <ul>
-          {data.allDataJson.nodes[0].items.map(
-            (navitem: { url: string; icon: string; label: string }) => (
-              <NavbarItem
-                url={navitem.url}
-                label={navitem.label}
-                icon={navitem.icon}
-                key={navitem.label.replaceAll(" ", "").toLowerCase()}
-              />
-            )
-          )}
-        </ul>
-      </nav>
-    </aside>
+    <>
+      <a href="" onClick={toggleClass}>
+        <a href="#" onClick={toggleClass}>
+          <img
+            src={`${__dirname}static/images/icon-menu.svg`}
+            alt=""
+            width={32}
+            height={32}
+          />
+        </a>
+      </a>
+      <aside className={isActive ? "active" : ""}>
+        <div className="header">
+          <a href="#" onClick={toggleClass}>
+            <img
+              src={`${__dirname}static/images/icon-close.svg`}
+              alt=""
+              width={32}
+              height={32}
+            />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            {data.allDataJson.nodes[0].items.map(
+              (navitem: { url: string; icon: string; label: string }) => (
+                <NavbarItem
+                  url={navitem.url}
+                  label={navitem.label}
+                  icon={navitem.icon}
+                  key={navitem.label.replaceAll(" ", "").toLowerCase()}
+                />
+              )
+            )}
+          </ul>
+        </nav>
+      </aside>
+    </>
   );
 };
 
