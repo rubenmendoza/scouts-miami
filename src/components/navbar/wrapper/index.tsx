@@ -6,7 +6,7 @@ import "./styles.sass";
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query {
-      allDataJson {
+      allDataJson(filter: { items: { elemMatch: { icon: { ne: null } } } }) {
         nodes {
           items {
             icon
@@ -17,10 +17,11 @@ const Navbar = () => {
       }
     }
   `);
+
   return (
-    <nav>
-      <ul>
-        {data.allDataJson.nodes[2].items.map(
+    <nav className="navbar-wrapper">
+      <ul role="list">
+        {data.allDataJson.nodes[0].items.map(
           (navitem: { url: string; icon: string; label: string }) => (
             <NavbarItem
               url={navitem.url}

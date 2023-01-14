@@ -10,14 +10,21 @@ footer
     gap: 1rem
     .info
         display: flex
-        flex-direction: row
+        flex-direction: column
         justify-content: space-between
         align-items: center
         padding: 0 1rem
+        font-size: 0.8rem
+        @media only screen and (min-width: 720px) 
+            flex-direction: row
+            padding: 0
         .copy
             display: flex
             flex-direction: row
             align-items: center
+            flex-wrap: wrap
             gap: 1rem
             img
-                width: 8rem
+                width: 4rem
+    .dev
+        text-align: center

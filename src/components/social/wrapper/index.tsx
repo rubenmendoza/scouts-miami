@@ -5,12 +5,14 @@ import "./styles.sass";
 
 const SocialWrapper = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allDataJson {
+    query MyQuery {
+      allDataJson(
+        filter: { sociallinks: { elemMatch: { hashtag: { ne: null } } } }
+      ) {
         nodes {
           sociallinks {
-            icon
             hashtag
+            icon
             provider
             url
           }
@@ -20,8 +22,8 @@ const SocialWrapper = () => {
   `);
   return (
     <nav>
-      <ul className="social-list">
-        {data.allDataJson.nodes[1].sociallinks.map(
+      <ul className="social-list" role="list">
+        {data.allDataJson.nodes[0].sociallinks.map(
           (sociallink: {
             url: string;
             hashtag: string;
