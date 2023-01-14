@@ -17,11 +17,10 @@ const Navbar = () => {
       }
     }
   `);
-
   return (
     <nav>
       <ul>
-        {data.allDataJson.nodes[0].items.map(
+        {data.allDataJson.nodes[2].items.map(
           (navitem: { url: string; icon: string; label: string }) => (
             <NavbarItem
               url={navitem.url}

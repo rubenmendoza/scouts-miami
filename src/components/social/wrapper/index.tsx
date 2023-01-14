@@ -21,7 +21,7 @@ const SocialWrapper = () => {
   return (
     <nav>
       <ul className="social-list">
-        {data.allDataJson.nodes[2].sociallinks.map(
+        {data.allDataJson.nodes[1].sociallinks.map(
           (sociallink: {
             url: string;
             hashtag: string;
