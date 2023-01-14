@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import NavbarItem from "../../navbar-item";
+import NavbarItem from "../../navbar/link";
 import "./styles.sass";
 
 const Nav = () => {
@@ -23,16 +23,6 @@ const Nav = () => {
   };
   return (
     <>
-      <a href="" onClick={toggleClass}>
-        <a href="#" onClick={toggleClass}>
-          <img
-            src={`${__dirname}static/images/icon-menu.svg`}
-            alt=""
-            width={32}
-            height={32}
-          />
-        </a>
-      </a>
       <aside className={isActive ? "active" : ""}>
         <div className="header">
           <a href="#" onClick={toggleClass}>
@@ -59,6 +49,15 @@ const Nav = () => {
           </ul>
         </nav>
       </aside>
+
+      <a href="#" onClick={toggleClass}>
+        <img
+          src={`${__dirname}static/images/icon-menu.svg`}
+          alt=""
+          width={32}
+          height={32}
+        />
+      </a>
     </>
   );
 };

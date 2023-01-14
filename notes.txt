@@ -6,3 +6,12 @@ $variant: ("small": 0.85, "medium": 1, "large": 1.5)
         font-size:  $ratio+rem
         border-radius: ($ratio * 1)+rem
         padding: ($ratio * 0.5)+rem ($ratio * 1)+rem
+
+
+Email, Twitter, Google
+social@scouttroop247.com
+s)G3b9Nkyu
+
+Twitter @scouttroop247
+
+Instagram scouttroop247

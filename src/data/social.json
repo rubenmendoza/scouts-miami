@@ -1,0 +1,22 @@
+{
+  "sociallinks": [
+    {
+      "url": "https://twitter.com/scouttroop247",
+      "hashtag": "@scouttroop247",
+      "icon": "icon-twitter",
+      "provider": "Twitter"
+    },
+    {
+      "url": "https://www.instagram.com/scouttroop247",
+      "hashtag": "scouttroop247",
+      "icon": "icon-instagram",
+      "provider": "Instagram"
+    },
+    {
+      "url": "https://calendar.google.com/calendar/u/0?cid=c29jaWFsQHNjb3V0dHJvb3AyNDcuY29t",
+      "hashtag": "scouttroop247",
+      "provider": "Google Calendar",
+      "icon": "icon-google"
+    }
+  ]
+}

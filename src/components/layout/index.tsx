@@ -1,8 +1,9 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
-import Navbar from "../navbar";
+import Navbar from "../navbar/wrapper";
 import Nav from "../mobile/nav";
+import Footer from "../footer";
 import "../reset.sass";
 import "../theme.sass";
 import "./styles.sass";
@@ -21,8 +22,9 @@ const Layout = ({ children }: props) => {
         </div>
       </div>
       <header className="centered">
-        <div className="container row">
+        <div className="container row menu-mobile">
           {breakpoints.sm ? <Nav /> : null}
+          {breakpoints.sm ? <h2>Pack 247</h2> : null}
           <StaticImage
             alt="Pack 247 Logo"
             src="../../images/logo.svg"
@@ -34,9 +36,7 @@ const Layout = ({ children }: props) => {
       <article className="centered">
         <div className="container">{children}</div>
       </article>
-      <footer className="centered">
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </>
   );
 };
