@@ -2,7 +2,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useBreakpoint } from "gatsby-plugin-breakpoints";
 import Navbar from "../navbar/wrapper";
-import Nav from "../mobile/nav";
+import Nav from "../navbar/mobile";
 import Footer from "../footer";
 import "../reset.sass";
 import "../theme.sass";

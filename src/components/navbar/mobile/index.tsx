@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import NavbarItem from "../../navbar/link";
+import NavbarItem from "../link";
 import "./styles.sass";
 
 const Nav = () => {
