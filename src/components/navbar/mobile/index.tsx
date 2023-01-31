@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import NavbarItem from "../link";
 import "./styles.sass";
 
-const Nav = () => {
+const NavMobile = () => {
   const data = useStaticQuery(graphql`
     query {
       allDataJson(filter: { items: { elemMatch: { icon: { ne: null } } } }) {
@@ -62,4 +62,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavMobile;

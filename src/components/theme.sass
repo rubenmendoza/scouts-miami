@@ -1,24 +1,4 @@
-:root
-    --s247-color-primary: #003f87
-    --s247-color-primary_darken: #083a72
-    --s247-color-primary_contrast: #ffffff
-    --s247-color-secondary: #f60707
-    --s247-color-accent: #fdc116
-    --success: #039b03
-    --info: #17a2b8
-    --warning: #ffb225
-    --danger: #ce1126
-    --light: #f8f9fa
-    --dark: #212121
-
-
-$s247-color-primary:var(--s247-color-primary)
-$s247-color-primary_contrast:var(--s247-color-primary_contrast)
-$s247-color-primary_darken:var(--s247-color-primary_darken)
-$s247-color-secondary:var(--s247-color-secondary)
-$s247-color-accent:var(--s247-color-accent)
-
-
+@import './_variables'
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 
@@ -28,3 +8,20 @@ $s247-color-accent:var(--s247-color-accent)
         background-color: $s247-color-primary
     to 
         background-color: $s247-color-secondary
+
+.top
+    background: $s247-color-primary
+    color: $s247-color-primary_contrast
+
+.layout
+    @media only screen and (min-width: 880px)
+        border-color: $s247-color-primary
+form
+    border-color: $s247-color-primary
+
+footer
+    background: $s247-color-primary
+    color: $s247-color-primary_contrast
+.social-link
+    span
+        color: $s247-color-primary_contrast
