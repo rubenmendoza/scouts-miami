@@ -21,8 +21,10 @@ const ContactForm: React.FC = () => {
     message: "",
   });
 
+  // HTMLInputElement
+
   const onChange = (e: FormEvent) => {
-    const { name, value } = e.target as HTMLInputElement;
+    const { name, value } = e.target as HTMLTextAreaElement;
     setFormData({ ...formData, [name]: value });
   };
 
@@ -31,32 +33,32 @@ const ContactForm: React.FC = () => {
   ) => {
     const apiURL = "https://scouttroop247.com/api";
     const message = `
-    Message received from <strong>${data.name}</strong>.<br /> 
-    Email address is <strong>${data.email}</strong>. <br />
+    Message received from <strong>${formData.name}</strong>.<br /> 
+    Email address is <strong>${formData.email}</strong>. <br />
     Message:<br />
-    ${data.message}
+    ${formData.message}
     `;
     await fetch(apiURL, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({
-        email: data.email,
-        subject: data.subject,
+      body: new URLSearchParams({
+        email: formData.email,
+        subject: formData.subject,
         message: message,
       }),
     }).then(async (res) => {
       const resData = await res;
-      console.log(resData);
       if (resData.status === 200) {
         alert("Message Sent!");
       } else {
         alert("Message failed to send");
       }
     });
-    console.log(message);
+    console.log(formData);
   };
+
   return (
     <Form onSubmit={onSubmit}>
       <h4>Contact Form</h4>
@@ -65,8 +67,9 @@ const ContactForm: React.FC = () => {
           id="name"
           name="name"
           type="text"
-          placeholder="John Doe"
+          placeholder="Robert Baden-Powell"
           label="Your Full Name"
+          errorText="Your name should only contain letters"
           required
           onChange={onChange}
         />
@@ -74,8 +77,9 @@ const ContactForm: React.FC = () => {
           id="email"
           name="email"
           type="email"
-          placeholder="johndoe@gmail.com"
+          placeholder="youremail@gmail.com"
           label="Your Email"
+          errorText="Your email must have a proper format"
           required
           onChange={onChange}
         />
@@ -83,21 +87,29 @@ const ContactForm: React.FC = () => {
           id="subject"
           name="subject"
           type="text"
-          placeholder="Comment"
+          placeholder="Comments"
           label="Subject"
+          errorText="Please mate, only numbers and letters, e.g. Enquiry"
           required
           onChange={onChange}
         />
-        <span>
+        <span className="input-wrapper">
           <label htmlFor="message">Message</label>
           <textarea
+            rows="5"
             name="message"
             id="message"
             onChange={onChange}
             value={formData.message}
           ></textarea>
         </span>
-        <button>Send</button>
+        <div
+          className="g-recaptcha"
+          data-sitekey={process.env.GATSBY_GOOGLE_RECAPTCHA_SITE_KEY}
+        />
+        <span className="input-wrapper">
+          <button className="button">Send</button>
+        </span>
       </fieldset>
     </Form>
   );

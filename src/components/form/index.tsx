@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.sass";
 
 interface Props {
   action?: string;

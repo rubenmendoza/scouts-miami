@@ -39,7 +39,9 @@ const InputField = React.memo(
           onBlur={onBlur}
           {...rest}
         />
-        {!!validationMessage && <div>{errorText || validationMessage}</div>}
+        {!!validationMessage && (
+          <div className="input-error">{errorText || validationMessage}</div>
+        )}
       </span>
     );
   }

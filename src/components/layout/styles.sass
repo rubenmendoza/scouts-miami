@@ -1,24 +1,25 @@
 body
     font-family: 'Roboto', sans-serif
+h1
+    font-weight: 300
 
 .layout
     display: grid
     grid-template-areas: "header" "main" "footer"
-    grid-gap: 1em
+    grid-gap: 3em
     grid-template-rows: auto 1fr auto
     width: 100vw
 
     @media only screen and (min-width: 880px) 
         width: 85vw
         margin: 0 auto
-        border-width: 0.5px
-        border-style: solid  
-
 
 header
     display: grid
     grid-area: header
-    border-bottom: 1px solid gray
+    border-width: 0
+    border-bottom-width: 0.5px
+    border-style: solid
     > div
         padding: 0 1em
 
@@ -36,7 +37,8 @@ header
 .logowidth
     width: 2.5em
     @media only screen and (min-width: 720px) 
-        width: 6em
+        width: 4.875em
+        transform: translateY(-0.15em)
 
 
 main
@@ -48,17 +50,15 @@ main
 footer
     grid-area: footer
 
-.m-2
+.col-3_2
     display: grid
     @media only screen and (min-width: 720px) 
         grid-template-columns: 3fr 2fr
-        grid-gap: 1em
-
-form
-    border-width: 0.5px
-    border-style: solid
-    border-radius: 1em
-    padding: 1em 
+        grid-gap: 2em
+.row-2
+    display: grid
+    grid-template-rows: auto 1fr
+    grid-gap: 2em
 
 .leaflet-tile-pane 
     -webkit-filter: grayscale(50%) hue-rotate(326deg)

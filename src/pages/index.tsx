@@ -6,18 +6,6 @@ import Seo from "../components/seo";
 
 const links = [
   {
-    text: "Add Pages",
-    url: "https://www.gatsbyjs.com/docs/tutoria/",
-    description: "media, evets, join-us, contact",
-    color: "#E95800",
-  },
-  {
-    text: "Add Contact form with captcha",
-    url: "https://www.gatsbyjs.com/docs/tutori/",
-    description: "captcha ",
-    color: "#E95800",
-  },
-  {
     text: "Add Widgets",
     url: "https://www.gatsbyjs.com/docs/tuto/",
     description: "instagram, google calendar, twitter",

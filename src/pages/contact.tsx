@@ -9,8 +9,8 @@ import ContactForm from "../components/form/contact";
 const Contact = () => {
   return (
     <Layout>
-      <div className="m-2">
-        <div>
+      <div className="col-3_2">
+        <div className="row-2">
           <div>
             <MapContainer
               style={{ height: "400px" }}
@@ -31,18 +31,19 @@ const Contact = () => {
           </div>
           <div>
             <StaticImage
-              alt="Cub Scouts Pack 247 - Miami Lakes / PSN"
+              alt="Cub Scouts Troop 247 - Miami Lakes / PSN"
               src="../images/contactus1.jpg"
             />
           </div>
         </div>
-        <div>
-          <h1> Contact Us</h1>
+        <div className="row-2">
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-            maxime, corrupti illum explicabo cum mollitia accusamus in. Esse est
-            dignissimos facilis alias amet ipsum dicta nam? Quasi quibusdam
-            laudantium id.
+            <h1> Contact Us</h1>
+            <h3> We are prepared to help you.</h3>
+            <p>
+              Our scouts want to hear from you. Do not hesitate to drop a couple
+              of lines with any comments, questions, invitations, etc.
+            </p>
           </div>
           <div>
             <ContactForm />

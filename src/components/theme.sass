@@ -1,5 +1,5 @@
 @import './_variables'
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap')
 
 
 
@@ -9,15 +9,14 @@
     to 
         background-color: $s247-color-secondary
 
-.top
-    background: $s247-color-primary
-    color: $s247-color-primary_contrast
+body
+    color: $s247-color-primary-text
 
 .layout
+    *
+        border-color: $s247-color-primary-border
     @media only screen and (min-width: 880px)
         border-color: $s247-color-primary
-form
-    border-color: $s247-color-primary
 
 footer
     background: $s247-color-primary
@@ -25,3 +24,10 @@ footer
 .social-link
     span
         color: $s247-color-primary_contrast
+
+.button
+    background: $s247-color-primary
+    color: $s247-color-primary_contrast
+
+.input-error
+    color: $s247-danger
